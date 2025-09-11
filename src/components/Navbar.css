@@ -1,0 +1,72 @@
+/* Navbar container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 245, 0.2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00fff5;
+  text-shadow: 0 0 8px #00adb5, 0 0 15px #00fff5;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #eee;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+/* Hover effects */
+.nav-links a:hover {
+  color: #00fff5;
+}
+
+/* Underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #00fff5;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px #00fff5;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
